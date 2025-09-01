@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Surprise</title>
+  <style>
+    body { text-align: center; font-family: Arial, sans-serif; background: pink; }
+    h1 { color: #d63384; }
+    .card { background: white; padding: 20px; margin: 20px auto; border-radius: 12px; width: 80%; max-width: 500px; }
+    button { padding: 10px 20px; margin-top: 20px; border: none; border-radius: 8px; background: #d63384; color: white; font-size: 16px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>🎉 Happy Birthday Sona 🎂</h1>
+  <div class="card" id="message">
+    <p>This is your interactive birthday surprise! 💖</p>
+    <button onclick="nextStep()">Click here for the last surprise</button>
+  </div>
+
+  <script>
+    let step = 0;
+    function nextStep() {
+      const msg = document.getElementById('message');
+      step++;
+      if (step === 1) {
+        msg.innerHTML = "🎈 Balloons everywhere! 🎈 <br><button onclick='nextStep()'>Next</button>";
+      } else if (step === 2) {
+        msg.innerHTML = "✨ Decorations light up ✨ <br><button onclick='nextStep()'>Next</button>";
+      } else if (step === 3) {
+        msg.innerHTML = "🎂 It's time to cut the cake my Sona! 🎂 <br><button onclick='nextStep()'>Cut Cake</button>";
+      } else if (step === 4) {
+        msg.innerHTML = `<h2>💖 Happy Birthday My Phulo 💖</h2>
+        <p>Happy birthday sona ess saal bhi tumhare sath nhi ha but hut my wish will come to u. 
+        Tum bas khuss raho sona, tumhari khusi is like the nuke that bright the earth soo much.  
+        Ek din tumne pouchha tha ki tumhari smile karne se humko lottery jeeta hua lagta ha ki nhi...  
+        aur humne no bola tha.  
+        Because lottery bouth chota chiz hai sona — i feel like i have the universe inside my hand.  
+        Jab tum smile karti ho, u r like a bright star 🌟.  
+        I want TO SEE EVERY SEC OF MY LIFE.  
+        <br><br>❤️ HAPPY BIRTHDAY MY PHULO ❤️</p>`;
+      }
+    }
+  </script>
+</body>
+</html>
